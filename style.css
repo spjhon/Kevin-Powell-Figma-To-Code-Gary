@@ -1,5 +1,10 @@
 :root {
-  --clr-neutral-100: hsla(0, 0%, 100%, 1);
+  /*Esto es lo primero que se coloca, los colores son extraidos del figma
+  y los nombres de 100 a 700 es por si toca agregar algun otro color, se utiliza 
+  por ejemplo el 150 y asi sucesivamente, utilizar siempre que se pueda usar HSLA*/
+
+  /*Utility clases pueden ser una ventaja utilizadas correctamente*/
+  --clr-neutral-100: hsla(0, 0%, 100%, 1); 
   --clr-primary-800: hsla(229, 47%, 17%, 1);
   --clr-primary-700: hsla(229, 43%, 20%, 1);
   --clr-primary-400: hsla(230, 50%, 58%, 0.3);
@@ -25,16 +30,18 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box; /*Esto es estandar para el box model*/
 }
 
 img {
+  /*Este es otro estandar recomendado para estos projectos*/
   max-width: 100%;
   display: block;
 }
 
 html {
-  color-scheme: dark;
+  color-scheme: dark; /*Esto es para que el sistema tenga preferencia entre dark y light
+  si se utiliza light y dark juntos el browser va a mirar el defult del sistema*/
 }
 
 body {

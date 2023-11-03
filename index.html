@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/main.js" defer></script>
     <title>Gary Resume Refactor</title>
@@ -16,16 +16,27 @@
   </head>
 
   <body>
+    <!--El payout se divide en dos secciones princpales
+    el main y de forma que quede debajo en caso de vista celular
+  el aside que va a llevar los iconos
+
+- Se comenzo con colocar solo el main y el aside como principio, luego
+fue agregando divs contenedores a medida que se vayan necesitando-->
     <div class="main-grid">
+
       <main>
+
         <p class="eyebrow">Skills & Experience</p>
+
         <h1 class="page-title">My Resume</h1>
+
         <p class="intro">
           As an individual with exquisite taste in the finest companies, I’ve
           helped represent both client and employer to the highest degree.
         </p>
 
         <div class="job-experience">
+
           <div class="job">
             <p class="year">2021</p>
             <div class="job-info">
@@ -61,6 +72,7 @@
               support team.
             </p>
           </div>
+
           <div class="job">
             <p class="year">2017</p>
             <div class="job-info">
@@ -72,7 +84,9 @@
               support team.
             </p>
           </div>
+
         </div>
+        
       </main>
 
       <aside>
@@ -80,26 +94,27 @@
         <ul class="icon-list" role="list">
           <li>
             <p class="visually-hidden">html</p>
-            <img src="html.svg" alt="" />
+            <img src="./public/html.svg" alt="" />
           </li>
           <li>
             <p class="visually-hidden">css</p>
-            <img src="css.svg" alt="" />
+            <img src="./public/css.svg" alt="" />
           </li>
           <li>
             <p class="visually-hidden">scss</p>
-            <img src="scss.svg" alt="" />
+            <img src="./public/scss.svg" alt="" />
           </li>
           <li>
             <p class="visually-hidden">scss</p>
-            <img src="js.svg" alt="" />
+            <img src="./public/js.svg" alt="" />
           </li>
           <li>
             <p class="visually-hidden">react</p>
-            <img src="react.svg" alt="" />
+            <img src="./public/react.svg" alt="" />
           </li>
         </ul>
       </aside>
+
     </div>
   </body>
 </html>
