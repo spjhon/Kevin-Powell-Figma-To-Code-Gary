@@ -4,7 +4,7 @@
   por ejemplo el 150 y asi sucesivamente, utilizar siempre que se pueda usar HSLA*/
 
   /*Utility clases pueden ser una ventaja utilizadas correctamente*/
-  --clr-neutral-100: hsla(0, 0%, 100%, 1); 
+  --clr-neutral-100: hsla(0, 0%, 100%, 1); /*clr is color*/
   --clr-primary-800: hsla(229, 47%, 17%, 1);
   --clr-primary-700: hsla(229, 43%, 20%, 1);
   --clr-primary-400: hsla(230, 50%, 58%, 0.3);
@@ -13,9 +13,9 @@
   --clr-accent-400: hsla(147, 93%, 43%, 1);
   --clr-secondary-400: hsla(229, 78%, 60%, 1);
 
-  --ff-base: "Outfit", sans-serif;
+  --ff-base: "Outfit", sans-serif; /*ff means font font*/
 
-  --fw-regular: 300;
+  --fw-regular: 300; /*fw is font weight*/
   --fw-semi-bold: 400;
   --fw-bold: 700;
 
@@ -54,7 +54,7 @@ body {
   line-height: 1.5;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) { /*El codigo viene de https://www.a11yproject.com/posts/how-to-hide-content/*/ 
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -75,20 +75,13 @@ body {
   grid-auto-flow: dense;
   align-items: center;
   min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100dvh; /*el dvh es para los mobiles*/
 }
 
 main {
   padding-block: 2rem;
   grid-column: 2;
   width: calc(100vw - var(--_gap-size) - var(--_aside-width));
-}
-
-aside {
-  grid-column: 1;
-  align-self: stretch;
-  display: flex;
-  justify-content: end;
 }
 
 .eyebrow {
@@ -184,6 +177,13 @@ aside {
   font-size: var(--fs-300);
   font-weight: var(--fw-bold);
   text-transform: uppercase;
+}
+
+aside {
+  grid-column: 1;
+  align-self: stretch;
+  display: flex;
+  justify-content: end;
 }
 
 .icon-list {
