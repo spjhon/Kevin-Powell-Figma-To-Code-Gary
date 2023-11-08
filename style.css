@@ -79,7 +79,7 @@ body {
 }
 
 main {
-  padding-block: 2rem;
+  padding-block: 2rem; /*esto es para que cuando se achique la pagina no toque la parte de arriba y abajo de la pagina*/
   grid-column: 2;
   width: calc(100vw - var(--_gap-size) - var(--_aside-width));
 }
@@ -101,8 +101,8 @@ main {
 }
 
 .intro {
-  font-size: var(--fs-500);
-  max-width: 45ch;
+  font-size: var(--fs-500); 
+  max-width: 45ch; /*ch quiere decir characters*/
 }
 
 .job-experience {
@@ -116,7 +116,7 @@ main {
   scrollbar-color: var(--clr-accent-400) var(--clr-primary-800);
 }
 
-.job-experience::-webkit-scrollbar {
+.job-experience::-webkit-scrollbar { /*here its a trick to change the scroolbar*/
   height: 0.75rem;
 }
 .job-experience::-webkit-scrollbar-track {
@@ -128,7 +128,7 @@ main {
   border-radius: 100vw;
 }
 
-.job-experience::after {
+.job-experience::after { /*aqui donde se agrega el espacio del final*/
   content: "";
   width: 50px;
   background: transparent;
@@ -145,7 +145,7 @@ main {
   margin: 0;
 }
 
-.job:first-child::before {
+.job:first-child::before { /*aqui se agrega el current role en la parte de arriba como el before del primer div*/
   content: "Current role";
   position: absolute;
   color: var(--clr-accent-400);
@@ -188,11 +188,11 @@ aside {
 
 .icon-list {
   height: 100%;
-  border-left: 1px solid var(--clr-primary-300);
+  border-left: 1px solid var(--clr-primary-300); /*Con esto es que crea la linea fina*/
   padding: 0;
   margin: 0;
   list-style: none;
-  display: grid;
+  display: grid; /*con estas propiedades de grid extiende la raya (borde) hasta todo el view port*/
   align-content: center;
   gap: 3rem;
 }
@@ -202,8 +202,8 @@ aside {
   padding-left: 2rem;
 }
 
-.icon-list > li::after {
-  --_size: 0.5rem;
+.icon-list > li::after { 
+  --_size: 0.5rem; /*de esta forma se le da cualquier radio al circulito, el _ significa que el scope es local*/
 
   content: "";
   position: absolute;
